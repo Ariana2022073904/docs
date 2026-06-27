@@ -1,39 +1,14 @@
 ---
-title: "Visión General de TradeWolf: App Universitaria"
+title: "Visión General de TradeWolf: Marketplace Universitario"
 sidebarTitle: "Visión General"
-description: "Resumen completo de TradeWolf: sus pantallas principales, tecnologías, flujo de usuario y el valor que aporta a la comunidad universitaria."
+description: "Resumen completo de TradeWolf: sus pantallas principales, flujo de usuario y el valor que aporta a la comunidad universitaria Android."
 ---
 
-TradeWolf es una aplicación Android desarrollada en Kotlin que construye un mercado interno universitario: un espacio donde los propios estudiantes son a la vez compradores y vendedores, conectados por el vínculo común de pertenecer a la misma institución académica.
+TradeWolf es una aplicación Android que construye un mercado interno universitario: un espacio donde los propios estudiantes son a la vez compradores y vendedores, conectados por el vínculo común de pertenecer a la misma institución académica.
 
 ## 1.5 Visión General
 
 TradeWolf nace de la necesidad de dotar a la comunidad universitaria de un canal propio y de confianza para el comercio entre pares. Los estudiantes pueden registrarse con sus datos institucionales, explorar publicaciones de otros compañeros, crear sus propios anuncios y negociar directamente a través del chat integrado, todo desde su dispositivo Android.
-
-<Info>
-  TradeWolf está construido sobre **Firebase** como plataforma backend, lo que garantiza autenticación segura, sincronización de datos en tiempo real y almacenamiento de imágenes sin necesidad de infraestructura propia.
-</Info>
-
----
-
-## Tecnologías principales
-
-Desde la perspectiva del usuario, TradeWolf funciona de forma fluida y transparente gracias a las siguientes tecnologías:
-
-<CardGroup cols={2}>
-  <Card title="Android + Kotlin" icon="android">
-    La app es nativa para Android y está escrita en Kotlin, lo que garantiza rendimiento óptimo y acceso completo a las funcionalidades del dispositivo.
-  </Card>
-  <Card title="Firebase Authentication" icon="lock">
-    Gestiona el registro e inicio de sesión de los estudiantes de forma segura, vinculando cada cuenta a las credenciales universitarias del usuario.
-  </Card>
-  <Card title="Firebase Realtime Database" icon="database">
-    Almacena publicaciones, perfiles de usuario y mensajes de chat, con sincronización instantánea entre dispositivos.
-  </Card>
-  <Card title="Firebase Storage" icon="image">
-    Permite subir y mostrar imágenes de perfil y de publicaciones con alta disponibilidad y tiempos de carga optimizados.
-  </Card>
-</CardGroup>
 
 ---
 
@@ -43,10 +18,10 @@ La experiencia en TradeWolf está organizada en pantallas claras e intuitivas qu
 
 <CardGroup cols={2}>
   <Card title="Login" icon="right-to-bracket">
-    Pantalla de inicio de sesión donde el estudiante accede con su correo institucional y contraseña registrados en Firebase Authentication.
+    Pantalla de inicio de sesión donde el estudiante accede con su correo y contraseña registrados en la plataforma.
   </Card>
   <Card title="Registro" icon="user-plus">
-    Formulario de alta de nuevo usuario. El estudiante introduce su nombre, facultad, código universitario y datos de contacto.
+    Formulario de alta de nuevo usuario. El estudiante introduce su nombre, apellidos, usuario, facultad, código universitario y datos de contacto.
   </Card>
   <Card title="Home" icon="house">
     Vista principal tras iniciar sesión. Muestra un resumen del marketplace con las publicaciones más recientes y accesos rápidos a las funciones principales.
@@ -74,7 +49,7 @@ La experiencia en TradeWolf está organizada en pantallas claras e intuitivas qu
 
 <Steps>
   <Step title="Registro e inicio de sesión">
-    El estudiante crea su cuenta con sus datos universitarios. Firebase Authentication valida y almacena sus credenciales de forma segura.
+    El estudiante crea su cuenta con sus datos universitarios. La plataforma valida y almacena sus credenciales de forma segura.
   </Step>
   <Step title="Explorar el marketplace">
     Desde el Home, el usuario navega por las publicaciones disponibles, aplica filtros y encuentra lo que necesita dentro de su comunidad.

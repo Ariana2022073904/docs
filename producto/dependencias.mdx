@@ -1,5 +1,5 @@
 ---
-title: "Suposiciones y Dependencias de TradeWolf"
+title: "Suposiciones y Dependencias Tecnológicas de TradeWolf"
 sidebarTitle: "Dependencias"
 description: "Supuestos del sistema y dependencias tecnológicas de TradeWolf: Firebase, Android y los requisitos mínimos para que la app funcione correctamente."
 ---
@@ -14,7 +14,7 @@ Estos son los supuestos que TradeWolf asume sobre el contexto y el perfil del us
 
 <CardGroup cols={2}>
   <Card title="📱 Dispositivo Android" icon="mobile">
-    El usuario cuenta con un smartphone Android compatible con las funciones de cámara y galería del sistema operativo.
+    El usuario cuenta con un smartphone Android 8.0 Oreo (API 26) o superior, con acceso a las funciones de cámara y galería del dispositivo.
   </Card>
   <Card title="🌐 Conexión a Internet" icon="wifi">
     El dispositivo tiene acceso activo a internet (datos móviles o Wi-Fi) para sincronizar publicaciones, mensajes y autenticación en tiempo real.
@@ -45,8 +45,10 @@ TradeWolf delega en los siguientes servicios externos las funciones críticas de
 |---|---|---|
 | **Firebase Authentication** | Gestiona el registro de nuevos usuarios y el inicio de sesión de forma segura. | Los usuarios no podrán acceder ni crear cuentas. |
 | **Firebase Realtime Database** | Almacena y sincroniza en tiempo real los datos de usuarios, publicaciones y mensajes de chat. | No se podrán cargar publicaciones ni enviar o recibir mensajes. |
+| **Firebase Firestore** | Soporte adicional para persistencia de datos estructurados de la plataforma. | Algunas funciones de datos podrían no estar disponibles. |
 | **Firebase Storage** | Almacena las imágenes que los usuarios envían dentro del chat. | No se podrán enviar ni visualizar imágenes en las conversaciones. |
-| **Android (SO)** | Provee acceso a cámara, galería y almacenamiento local del dispositivo. | No se podrán adjuntar imágenes desde el dispositivo. |
+| **Glide (carga de imágenes)** | Descarga y muestra las imágenes de las publicaciones y del chat de forma eficiente. | Las imágenes de publicaciones y mensajes no se mostrarán correctamente. |
+| **Android 8.0+ (API 26)** | Provee acceso a cámara, galería y almacenamiento del dispositivo mediante permisos del sistema. | No se podrán adjuntar imágenes ni usar funciones del hardware del dispositivo. |
 
 ---
 
@@ -58,7 +60,7 @@ TradeWolf delega en los siguientes servicios externos las funciones críticas de
 
 | Requisito | Detalle |
 |---|---|
-| **Sistema operativo** | Android (versión compatible con acceso a cámara y galería) |
+| **Sistema operativo** | Android 8.0 Oreo (API 26) o superior |
 | **Conectividad** | Internet activo (Wi-Fi o datos móviles) |
 | **Cuenta de usuario** | Correo electrónico válido + código universitario |
 | **Moneda** | Soles peruanos (S/) para todos los precios |

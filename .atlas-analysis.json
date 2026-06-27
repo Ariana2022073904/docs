@@ -1,0 +1,98 @@
+{
+  "projectType": "saas",
+  "projectName": "TradeWolf",
+  "projectDescription": "Aplicación móvil Android para que estudiantes universitarios compren, vendan e intercambien productos y servicios dentro de su comunidad académica, con mensajería en tiempo real integrada.",
+  "theme": "almond",
+  "primaryColor": "#E05C2A",
+  "lightColor": "#F5A07A",
+  "darkColor": "#1A1F36",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentación",
+        "groups": [
+          {
+            "group": "Introducción",
+            "pages": [
+              "introduccion/proposito",
+              "introduccion/vision-general",
+              "introduccion/posicionamiento"
+            ]
+          },
+          {
+            "group": "Usuarios e Interesados",
+            "pages": [
+              "usuarios/interesados",
+              "usuarios/perfiles",
+              "usuarios/necesidades"
+            ]
+          },
+          {
+            "group": "Vista General del Producto",
+            "pages": [
+              "producto/perspectiva",
+              "producto/capacidades",
+              "producto/dependencias",
+              "producto/licenciamiento"
+            ]
+          },
+          {
+            "group": "Características",
+            "pages": [
+              "caracteristicas/autenticacion",
+              "caracteristicas/publicaciones",
+              "caracteristicas/mensajeria",
+              "caracteristicas/perfil"
+            ]
+          },
+          {
+            "group": "Calidad y Requisitos",
+            "pages": [
+              "calidad/restricciones",
+              "calidad/rangos",
+              "calidad/estandares"
+            ]
+          },
+          {
+            "group": "Guía de Uso",
+            "pages": [
+              "guia/registro-inicio",
+              "guia/publicar-oferta",
+              "guia/explorar-marketplace",
+              "guia/mensajes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Registro con datos universitarios (facultad, código universitario)",
+    "Inicio de sesión seguro con correo y contraseña",
+    "Crear publicaciones de productos o servicios con categoría, tipo y precio",
+    "Marketplace con filtros por categoría y tipo",
+    "Búsqueda de publicaciones por título o descripción",
+    "Editar y eliminar publicaciones propias",
+    "Mensajería privada en tiempo real entre usuarios",
+    "Envío de imágenes en el chat (desde galería o cámara)",
+    "Lista de conversaciones activas con último mensaje",
+    "Edición del perfil personal"
+  ],
+  "publicApiSurface": [
+    "LoginActivity — autenticación con email/contraseña",
+    "RegisterActivity — registro con nombres, apellidos, usuario, email, contraseña, teléfono, facultad, código universitario",
+    "HomeActivity — panel principal de navegación",
+    "CreatePostActivity — formulario de publicación con categoría y tipo",
+    "MyPostsActivity — feed de publicaciones con búsqueda y filtros",
+    "ChatActivity — chat individual con texto e imágenes",
+    "ChatsListActivity — lista de conversaciones activas",
+    "EditProfileActivity — edición de datos del perfil",
+    "AuthRepository.login(email, password, callback)",
+    "AuthRepository.registrarUsuario(...)",
+    "AuthRepository.logout()",
+    "ChatRepository.sendMessage(receiverId, text, ...)",
+    "ChatRepository.sendMessageWithImage(receiverId, text, imageUrl, ...)",
+    "ChatRepository.listenToMessages(receiverId, ...)",
+    "ChatRepository.uploadImageToStorage(imageUri, ...)"
+  ]
+}

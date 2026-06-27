@@ -1,0 +1,106 @@
+---
+title: "Visión General de TradeWolf: App Universitaria"
+sidebarTitle: "Visión General"
+description: "Resumen completo de TradeWolf: sus pantallas principales, tecnologías, flujo de usuario y el valor que aporta a la comunidad universitaria."
+---
+
+TradeWolf es una aplicación Android desarrollada en Kotlin que construye un mercado interno universitario: un espacio donde los propios estudiantes son a la vez compradores y vendedores, conectados por el vínculo común de pertenecer a la misma institución académica.
+
+## 1.5 Visión General
+
+TradeWolf nace de la necesidad de dotar a la comunidad universitaria de un canal propio y de confianza para el comercio entre pares. Los estudiantes pueden registrarse con sus datos institucionales, explorar publicaciones de otros compañeros, crear sus propios anuncios y negociar directamente a través del chat integrado, todo desde su dispositivo Android.
+
+<Info>
+  TradeWolf está construido sobre **Firebase** como plataforma backend, lo que garantiza autenticación segura, sincronización de datos en tiempo real y almacenamiento de imágenes sin necesidad de infraestructura propia.
+</Info>
+
+---
+
+## Tecnologías principales
+
+Desde la perspectiva del usuario, TradeWolf funciona de forma fluida y transparente gracias a las siguientes tecnologías:
+
+<CardGroup cols={2}>
+  <Card title="Android + Kotlin" icon="android">
+    La app es nativa para Android y está escrita en Kotlin, lo que garantiza rendimiento óptimo y acceso completo a las funcionalidades del dispositivo.
+  </Card>
+  <Card title="Firebase Authentication" icon="lock">
+    Gestiona el registro e inicio de sesión de los estudiantes de forma segura, vinculando cada cuenta a las credenciales universitarias del usuario.
+  </Card>
+  <Card title="Firebase Realtime Database" icon="database">
+    Almacena publicaciones, perfiles de usuario y mensajes de chat, con sincronización instantánea entre dispositivos.
+  </Card>
+  <Card title="Firebase Storage" icon="image">
+    Permite subir y mostrar imágenes de perfil y de publicaciones con alta disponibilidad y tiempos de carga optimizados.
+  </Card>
+</CardGroup>
+
+---
+
+## Pantallas principales
+
+La experiencia en TradeWolf está organizada en pantallas claras e intuitivas que cubren todo el flujo del usuario, desde el acceso hasta la comunicación con otros estudiantes.
+
+<CardGroup cols={2}>
+  <Card title="Login" icon="right-to-bracket">
+    Pantalla de inicio de sesión donde el estudiante accede con su correo institucional y contraseña registrados en Firebase Authentication.
+  </Card>
+  <Card title="Registro" icon="user-plus">
+    Formulario de alta de nuevo usuario. El estudiante introduce su nombre, facultad, código universitario y datos de contacto.
+  </Card>
+  <Card title="Home" icon="house">
+    Vista principal tras iniciar sesión. Muestra un resumen del marketplace con las publicaciones más recientes y accesos rápidos a las funciones principales.
+  </Card>
+  <Card title="Crear Publicación" icon="plus">
+    Pantalla para publicar un nuevo anuncio. El estudiante añade título, descripción, precio, categoría e imágenes del producto o servicio.
+  </Card>
+  <Card title="Marketplace (Mis Publicaciones)" icon="store">
+    Feed completo de publicaciones activas con filtros por categoría, precio y facultad. El estudiante también puede revisar y gestionar sus propios anuncios.
+  </Card>
+  <Card title="Chat" icon="message">
+    Conversación privada en tiempo real entre dos usuarios. Soporta mensajes de texto e imágenes para facilitar la negociación.
+  </Card>
+  <Card title="Lista de Chats" icon="inbox">
+    Vista de todas las conversaciones activas del usuario, ordenadas por última actividad, con previsualización del mensaje más reciente.
+  </Card>
+  <Card title="Mi Perfil" icon="circle-user">
+    Pantalla donde el estudiante puede ver y editar su información personal: foto de perfil, facultad, código universitario y datos de contacto.
+  </Card>
+</CardGroup>
+
+---
+
+## Flujo principal del usuario
+
+<Steps>
+  <Step title="Registro e inicio de sesión">
+    El estudiante crea su cuenta con sus datos universitarios. Firebase Authentication valida y almacena sus credenciales de forma segura.
+  </Step>
+  <Step title="Explorar el marketplace">
+    Desde el Home, el usuario navega por las publicaciones disponibles, aplica filtros y encuentra lo que necesita dentro de su comunidad.
+  </Step>
+  <Step title="Crear una publicación">
+    Si desea vender o intercambiar algo, el estudiante accede a "Crear Publicación", completa el formulario y sube imágenes del artículo o servicio.
+  </Step>
+  <Step title="Contactar al vendedor">
+    Al encontrar una publicación de interés, el comprador inicia un chat privado con el vendedor directamente desde el anuncio.
+  </Step>
+  <Step title="Negociar y cerrar el trato">
+    Ambos estudiantes conversan a través del chat en tiempo real, acuerdan condiciones y coordinan la entrega dentro del campus.
+  </Step>
+</Steps>
+
+---
+
+## Propuesta de valor
+
+<Tip>
+  TradeWolf no es solo un marketplace: es un ecosistema de confianza. Al restringir el acceso a estudiantes verificados de la misma institución, cada transacción se produce entre personas que comparten el mismo espacio académico, lo que reduce significativamente el riesgo asociado al comercio entre desconocidos.
+</Tip>
+
+La plataforma aporta a la comunidad universitaria:
+
+- **Confianza**: todos los usuarios son estudiantes verificados de la misma institución.
+- **Proximidad**: compradores y vendedores están en el mismo campus, facilitando la entrega.
+- **Relevancia**: las publicaciones son pertinentes para el contexto universitario (libros, apuntes, tutorías, material académico, etc.).
+- **Inmediatez**: el chat en tiempo real permite cerrar acuerdos al instante.

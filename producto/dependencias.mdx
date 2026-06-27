@@ -1,0 +1,64 @@
+---
+title: "Suposiciones y Dependencias de TradeWolf"
+sidebarTitle: "Dependencias"
+description: "Supuestos del sistema y dependencias tecnológicas de TradeWolf: Firebase, Android y los requisitos mínimos para que la app funcione correctamente."
+---
+
+Para que TradeWolf funcione correctamente, tanto el sistema como el usuario deben cumplir con ciertos requisitos básicos. Esta sección detalla los supuestos sobre el entorno del usuario y las dependencias tecnológicas sobre las que se apoya la aplicación.
+
+## 4.3 Suposiciones y Dependencias
+
+### Supuestos del sistema
+
+Estos son los supuestos que TradeWolf asume sobre el contexto y el perfil del usuario al momento de usar la aplicación:
+
+<CardGroup cols={2}>
+  <Card title="📱 Dispositivo Android" icon="mobile">
+    El usuario cuenta con un smartphone Android compatible con las funciones de cámara y galería del sistema operativo.
+  </Card>
+  <Card title="🌐 Conexión a Internet" icon="wifi">
+    El dispositivo tiene acceso activo a internet (datos móviles o Wi-Fi) para sincronizar publicaciones, mensajes y autenticación en tiempo real.
+  </Card>
+  <Card title="✉️ Correo Electrónico Válido" icon="envelope">
+    El usuario posee una dirección de correo electrónico activa para el proceso de registro e inicio de sesión en la plataforma.
+  </Card>
+  <Card title="🎓 Código Universitario" icon="id-card">
+    El usuario es estudiante activo y dispone de un código universitario válido para completar su perfil dentro de la comunidad TradeWolf.
+  </Card>
+</CardGroup>
+
+<Info>
+  Los precios de todos los productos y servicios publicados en TradeWolf se expresan en **soles peruanos (S/)**, la moneda oficial de la plataforma.
+</Info>
+
+---
+
+### Dependencias tecnológicas
+
+TradeWolf delega en los siguientes servicios externos las funciones críticas de infraestructura. Estas dependencias son transparentes para el usuario final, pero determinan el correcto funcionamiento de la app.
+
+<Note>
+  Todos los servicios de Firebase requieren que el dispositivo tenga **conexión activa a internet**. Sin conectividad, las funciones de autenticación, visualización de publicaciones y mensajería no estarán disponibles.
+</Note>
+
+| Dependencia | Rol en la aplicación | Impacto si no está disponible |
+|---|---|---|
+| **Firebase Authentication** | Gestiona el registro de nuevos usuarios y el inicio de sesión de forma segura. | Los usuarios no podrán acceder ni crear cuentas. |
+| **Firebase Realtime Database** | Almacena y sincroniza en tiempo real los datos de usuarios, publicaciones y mensajes de chat. | No se podrán cargar publicaciones ni enviar o recibir mensajes. |
+| **Firebase Storage** | Almacena las imágenes que los usuarios envían dentro del chat. | No se podrán enviar ni visualizar imágenes en las conversaciones. |
+| **Android (SO)** | Provee acceso a cámara, galería y almacenamiento local del dispositivo. | No se podrán adjuntar imágenes desde el dispositivo. |
+
+---
+
+### Resumen de requisitos mínimos
+
+<Warning>
+  Si el dispositivo no cumple con los requisitos mínimos de Android o no tiene acceso a internet, algunas funcionalidades de TradeWolf estarán limitadas o no disponibles.
+</Warning>
+
+| Requisito | Detalle |
+|---|---|
+| **Sistema operativo** | Android (versión compatible con acceso a cámara y galería) |
+| **Conectividad** | Internet activo (Wi-Fi o datos móviles) |
+| **Cuenta de usuario** | Correo electrónico válido + código universitario |
+| **Moneda** | Soles peruanos (S/) para todos los precios |

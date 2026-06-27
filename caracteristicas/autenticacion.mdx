@@ -1,0 +1,85 @@
+---
+title: "Autenticación y Registro en TradeWolf"
+sidebarTitle: "Autenticación"
+description: "Crea tu cuenta universitaria en TradeWolf o inicia sesión. Conoce los campos requeridos, validaciones y mensajes de error del sistema de acceso."
+---
+
+TradeWolf utiliza un sistema de autenticación seguro basado en Firebase, diseñado exclusivamente para estudiantes universitarios. Puedes crear una cuenta nueva con tus datos académicos o iniciar sesión si ya tienes una cuenta registrada. Una vez autenticado, la sesión se mantiene activa entre usos de la aplicación hasta que decidas cerrarla manualmente.
+
+## Crear una cuenta nueva
+
+Para registrarte en TradeWolf necesitas completar todos los campos del formulario de registro. Asegúrate de tener a mano tu información universitaria antes de comenzar.
+
+<Steps>
+  <Step title="Abre la pantalla de registro">
+    Desde la pantalla de inicio de la app, toca el botón **"Registrarse"** para acceder al formulario de creación de cuenta.
+  </Step>
+  <Step title="Completa tus datos personales">
+    Ingresa tu **nombre(s)**, **apellidos**, un **nombre de usuario** (nickname) único y tu **número de teléfono**.
+  </Step>
+  <Step title="Agrega tu información universitaria">
+    Selecciona tu **facultad** e ingresa tu **código universitario**. Estos datos permiten que otros estudiantes identifiquen tu perfil dentro de la comunidad.
+  </Step>
+  <Step title="Configura tus credenciales de acceso">
+    Ingresa tu **correo electrónico** universitario o personal y elige una **contraseña** de al menos 6 caracteres.
+  </Step>
+  <Step title="Envía el formulario">
+    Toca el botón **"Registrarse"**. Si todos los datos son válidos, verás el mensaje de confirmación **"Registro enviado. Ahora inicia sesión."** y serás redirigido a la pantalla de inicio de sesión.
+  </Step>
+</Steps>
+
+<Warning>
+  La contraseña debe tener **mínimo 6 caracteres**. Si ingresa una contraseña más corta, el sistema mostrará el mensaje: *"La contraseña debe tener al menos 6 caracteres"* y no podrás completar el registro.
+</Warning>
+
+## Iniciar sesión
+
+Si ya tienes una cuenta en TradeWolf, puedes ingresar directamente con tu correo y contraseña. Si la app detecta que ya tienes una sesión activa, te redirigirá automáticamente a la pantalla principal (Home) sin necesidad de volver a autenticarte.
+
+<Steps>
+  <Step title="Ingresa tu correo electrónico">
+    Escribe el correo con el que te registraste en TradeWolf.
+  </Step>
+  <Step title="Ingresa tu contraseña">
+    Escribe tu contraseña en el campo correspondiente.
+  </Step>
+  <Step title="Toca Iniciar sesión">
+    Toca el botón **"Iniciar sesión"**. Si las credenciales son correctas, serás redirigido a la pantalla principal de la aplicación.
+  </Step>
+</Steps>
+
+## Validaciones de campos
+
+Todos los campos del formulario de registro son obligatorios. El sistema valida el formato de los datos antes de enviar el formulario.
+
+| Campo | Regla de validación |
+|---|---|
+| Nombres | Obligatorio |
+| Apellidos | Obligatorio |
+| Usuario | Obligatorio |
+| Correo electrónico | Obligatorio · Debe tener formato de email válido (ej. `nombre@dominio.com`) |
+| Contraseña | Obligatorio · Mínimo 6 caracteres |
+| Teléfono | Obligatorio |
+| Facultad | Obligatorio |
+| Código universitario | Obligatorio |
+
+## Mensajes de error del sistema
+
+A continuación se describen los mensajes que puede mostrar la aplicación durante el proceso de autenticación o registro, junto con su causa y la acción recomendada.
+
+| Mensaje | Causa | Qué hacer |
+|---|---|---|
+| *"Ingresa tu correo"* | El campo de correo está vacío | Escribe tu dirección de correo electrónico |
+| *"Correo no válido"* | El formato del correo es incorrecto | Revisa que el correo tenga el formato `usuario@dominio.com` |
+| *"Ingresa tu contraseña"* | El campo de contraseña está vacío | Escribe tu contraseña |
+| *"La contraseña debe tener al menos 6 caracteres"* | La contraseña ingresada es demasiado corta | Usa una contraseña de 6 caracteres o más |
+| *"Esta cuenta ya existe. Inicia sesión."* | El correo ya está registrado en TradeWolf | Ve a la pantalla de inicio de sesión con ese correo |
+| *"Registro enviado. Ahora inicia sesión."* | El registro se completó correctamente | Inicia sesión con tus nuevas credenciales |
+
+## Gestión de sesión y cierre de sesión
+
+TradeWolf mantiene tu sesión activa de forma persistente. Esto significa que al cerrar y volver a abrir la app no necesitarás iniciar sesión nuevamente, siempre que no hayas cerrado sesión manualmente.
+
+<Info>
+  Para cerrar sesión, dirígete a la **pantalla principal (Home)** y toca el botón **"Cerrar sesión"**. Esto eliminará tu sesión activa y la próxima vez que abras la app deberás ingresar tus credenciales nuevamente.
+</Info>

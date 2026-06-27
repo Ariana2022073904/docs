@@ -1,0 +1,41 @@
+---
+title: "Rangos de Calidad y Rendimiento de TradeWolf"
+sidebarTitle: "Calidad"
+description: "Estándares de calidad de TradeWolf: usabilidad, rendimiento en tiempo real, disponibilidad, seguridad y escalabilidad del marketplace universitario."
+---
+
+TradeWolf está diseñado para ofrecer una experiencia confiable y eficiente a los estudiantes universitarios que lo utilizan como marketplace. Los siguientes atributos de calidad definen los estándares que la plataforma busca cumplir en su funcionamiento diario.
+
+## Sección 7: Rangos de Calidad
+
+Cada dimensión de calidad ha sido evaluada en función del contexto universitario en el que opera TradeWolf y de la infraestructura tecnológica que lo sustenta (Firebase).
+
+<CardGroup cols={2}>
+  <Card title="Usabilidad" icon="graduation-cap">
+    La interfaz de TradeWolf está diseñada para ser **intuitiva para estudiantes universitarios**, sin importar su nivel de experiencia tecnológica. El tiempo estimado de aprendizaje para usar las funciones principales es de **menos de 10 minutos**.
+  </Card>
+
+  <Card title="Rendimiento" icon="bolt">
+    Los mensajes en el chat aparecen en **tiempo real** con latencia mínima. Las publicaciones del marketplace se cargan de forma **instantánea** desde Firebase Realtime Database, garantizando una experiencia fluida.
+  </Card>
+
+  <Card title="Disponibilidad" icon="server">
+    La disponibilidad de TradeWolf depende directamente de los servicios de Firebase. En condiciones normales de operación, Firebase garantiza un **uptime del 99.9%**, lo que asegura que la app esté accesible casi en todo momento.
+  </Card>
+
+  <Card title="Seguridad" icon="shield-halved">
+    El acceso a todas las funciones de la app está **restringido a usuarios autenticados**. La gestión de credenciales (registro, inicio de sesión y recuperación de contraseña) es manejada de forma segura por **Firebase Auth**.
+  </Card>
+
+  <Card title="Escalabilidad" icon="chart-line">
+    La infraestructura de **Firebase Realtime Database escala automáticamente** a medida que crece el número de usuarios activos, sin necesidad de intervención manual ni configuraciones adicionales por parte del equipo de TradeWolf.
+  </Card>
+
+  <Card title="Fiabilidad" icon="circle-check">
+    Antes de enviar cualquier dato al servidor, la app **valida los formularios del lado del cliente**. Esto previene errores comunes de entrada y garantiza que la información almacenada en Firebase sea consistente y correcta.
+  </Card>
+</CardGroup>
+
+<Info>
+  Todos estos atributos de calidad son monitoreados de forma continua a través de las herramientas de diagnóstico que ofrece la consola de Firebase. Ante cualquier degradación del servicio, el equipo de TradeWolf puede actuar de forma rápida y efectiva.
+</Info>

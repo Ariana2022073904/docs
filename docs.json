@@ -1,72 +1,77 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "TradeWolf",
+  "theme": "almond",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#E05C2A",
+    "light": "#F5A07A",
+    "dark": "#1A1F36"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
+        "tab": "Documentación",
+        "groups": [
+          {
+            "group": "Introducción",
+            "pages": [
+              "introduccion/proposito",
+              "introduccion/vision-general",
+              "introduccion/posicionamiento"
+            ]
+          },
+          {
+            "group": "Usuarios e Interesados",
+            "pages": [
+              "usuarios/interesados",
+              "usuarios/perfiles",
+              "usuarios/necesidades"
+            ]
+          },
+          {
+            "group": "Vista General del Producto",
+            "pages": [
+              "producto/perspectiva",
+              "producto/capacidades",
+              "producto/dependencias",
+              "producto/licenciamiento"
+            ]
+          },
+          {
+            "group": "Características",
+            "pages": [
+              "caracteristicas/autenticacion",
+              "caracteristicas/publicaciones",
+              "caracteristicas/mensajeria",
+              "caracteristicas/perfil"
+            ]
+          },
+          {
+            "group": "Calidad y Requisitos",
+            "pages": [
+              "calidad/restricciones",
+              "calidad/rangos",
+              "calidad/estandares"
+            ]
+          },
+          {
+            "group": "Guía de Uso",
+            "pages": [
+              "guia/registro-inicio",
+              "guia/publicar-oferta",
+              "guia/explorar-marketplace",
+              "guia/mensajes"
+            ]
+          }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
     ]
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+  "navbar": {
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/Ariana2022073904/Moviles"
     }
   }
 }

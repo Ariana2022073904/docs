@@ -1,0 +1,49 @@
+---
+title: "Perspectiva del Producto TradeWolf"
+sidebarTitle: "Perspectiva"
+description: "TradeWolf es una app Android autónoma para la economía universitaria, con tres subsistemas: autenticación, marketplace y mensajería en tiempo real."
+---
+
+TradeWolf es una aplicación móvil Android diseñada exclusivamente para la comunidad universitaria. Funciona como un ecosistema autónomo que permite a los estudiantes comprar, vender e intercambiar productos y servicios dentro de su campus, sin depender de ningún marketplace externo.
+
+## 4.1 Perspectiva del Producto
+
+A diferencia de las plataformas comerciales de venta en línea, TradeWolf no es una extensión ni un módulo de ningún sistema existente. Es una solución independiente, construida desde cero para responder a las necesidades reales del entorno universitario peruano.
+
+<Info>
+  TradeWolf opera de manera completamente autónoma. No requiere integración con marketplaces de terceros ni con sistemas institucionales previos.
+</Info>
+
+La aplicación se apoya en los servicios en la nube de **Firebase** para garantizar autenticación segura, almacenamiento de datos en tiempo real y gestión de archivos multimedia. Esto permite que la plataforma sea escalable, confiable y accesible desde cualquier dispositivo Android con conexión a internet.
+
+### El ecosistema estudiantil
+
+TradeWolf es la ventana de los estudiantes hacia la microeconomía del campus. Desde una sola aplicación, cualquier alumno puede convertirse en vendedor, comprador o ambos, participando activamente en una comunidad de intercambio confiable y cercana.
+
+<CardGroup cols={3}>
+  <Card title="🔐 Autenticación" icon="lock">
+    Registro e inicio de sesión seguro con correo electrónico y código universitario, gestionado por Firebase Authentication.
+  </Card>
+  <Card title="🛒 Marketplace" icon="store">
+    Publicación y exploración de productos y servicios con filtros por categoría, tipo y búsqueda por texto.
+  </Card>
+  <Card title="💬 Mensajería" icon="message">
+    Chat privado en tiempo real entre compradores y vendedores, con soporte para texto e imágenes.
+  </Card>
+</CardGroup>
+
+### Interconexión de subsistemas
+
+Los tres subsistemas de TradeWolf no funcionan de forma aislada, sino que se complementan para ofrecer una experiencia fluida:
+
+| Subsistema | Función principal | Tecnología base |
+|---|---|---|
+| **Autenticación** | Registro, inicio de sesión y gestión de identidad | Firebase Authentication |
+| **Marketplace** | Creación, exploración y gestión de publicaciones | Firebase Realtime Database |
+| **Mensajería** | Chat en tiempo real con soporte multimedia | Firebase Realtime Database + Storage |
+
+<Tip>
+  Gracias a la integración entre subsistemas, puedes iniciar una conversación con un vendedor directamente desde su publicación en el marketplace, sin salir de la app ni compartir datos de contacto de forma manual.
+</Tip>
+
+La arquitectura autónoma de TradeWolf garantiza que todos los datos de la comunidad universitaria permanezcan dentro del ecosistema de la plataforma, brindando mayor privacidad y control a sus estudiantes.

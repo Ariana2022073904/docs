@@ -1,0 +1,51 @@
+---
+title: "Estándares Legales y de Seguridad de TradeWolf"
+sidebarTitle: "Estándares"
+description: "Estándares legales, de comunicación, plataforma y seguridad que TradeWolf cumple: cifrado, privacidad, permisos Android y protección de contraseñas."
+---
+
+TradeWolf opera bajo un marco de estándares que abarca aspectos legales, de comunicación, cumplimiento de plataforma y seguridad de datos. Estos estándares garantizan que la app sea confiable, transparente y respetuosa de la privacidad de sus usuarios dentro del ecosistema universitario.
+
+## Sección 9: Otros Requerimientos del Producto
+
+### a) Estándares Legales
+
+<Note>
+  Al registrarte en TradeWolf, otorgas tu **consentimiento implícito** para que la aplicación recopile y procese los datos personales necesarios para su funcionamiento: nombre completo, correo electrónico, número de teléfono y código universitario. El tratamiento de esta información está sujeto a las **políticas de privacidad de Firebase/Google**. Asimismo, queda estrictamente prohibido publicar contenido ilegal dentro de la plataforma; el incumplimiento de esta norma puede derivar en la suspensión de la cuenta.
+</Note>
+
+### b) Estándares de Comunicación
+
+<Tip>
+  Toda la comunicación entre TradeWolf y los servidores de Firebase se realiza a través de **HTTPS/SSL**, lo que garantiza que los datos transmitidos viajen siempre cifrados. Tus mensajes privados y los datos de tu cuenta están protegidos contra interceptaciones externas en tránsito.
+</Tip>
+
+Además del cifrado en tránsito, los mensajes privados dentro del chat son **visibles únicamente para los dos participantes** de cada conversación. Ningún otro usuario ni administrador puede acceder al contenido de tus chats privados.
+
+### c) Estándares de Cumplimiento de la Plataforma
+
+TradeWolf cumple con las **políticas de Google Play (Android)** en lo que respecta al uso de permisos sensibles del dispositivo:
+
+<Steps>
+  <Step title="Permisos en tiempo de ejecución">
+    Los permisos de **cámara** y **galería** se solicitan únicamente en el momento en que el usuario intenta usar esas funciones, no durante la instalación de la app.
+  </Step>
+  <Step title="Consentimiento explícito">
+    El sistema operativo Android presenta al usuario un diálogo de confirmación antes de conceder cada permiso. El usuario puede aceptar o denegar libremente.
+  </Step>
+  <Step title="Uso limitado al propósito declarado">
+    Los permisos de cámara y galería se utilizan **exclusivamente** para adjuntar imágenes en el chat. No se emplean para ningún otro fin.
+  </Step>
+</Steps>
+
+### d) Estándares de Calidad y Seguridad
+
+| Aspecto | Implementación en TradeWolf |
+|---|---|
+| Gestión de contraseñas | Manejadas por **Firebase Auth**; nunca se almacenan en texto plano |
+| Acceso a recursos | Publicaciones y chats requieren **autenticación activa** en todo momento |
+| Protección de sesión | Una sesión inactiva o cerrada niega automáticamente el acceso a cualquier recurso protegido |
+
+<Info>
+  Firebase Auth implementa internamente estándares de la industria como el hash seguro de contraseñas (bcrypt) y tokens de sesión con expiración. Como usuario de TradeWolf, nunca necesitas preocuparte por el almacenamiento de tus credenciales: ese proceso está completamente abstraído y gestionado por Google.
+</Info>

@@ -1,0 +1,54 @@
+---
+title: "Gestión de Perfil de Usuario en TradeWolf"
+sidebarTitle: "Perfil"
+description: "Edita tu perfil en TradeWolf: actualiza tu nombre, facultad, código universitario, teléfono y usuario desde la pantalla de edición de perfil."
+---
+
+Tu perfil en TradeWolf contiene la información que otros estudiantes ven cuando interactúan contigo en el marketplace o en el chat. Puedes actualizar tus datos personales y universitarios en cualquier momento desde la pantalla de edición de perfil. Algunos campos, como el correo electrónico, son de solo lectura porque están vinculados directamente a tu cuenta de autenticación.
+
+## Campos del perfil
+
+La tabla a continuación describe todos los campos que componen tu perfil, indicando cuáles puedes editar libremente y cuáles son gestionados por el sistema.
+
+| Campo | ¿Editable? | Descripción |
+|---|---|---|
+| **Nombres** | ✅ Sí | Tu nombre o nombres de pila |
+| **Apellidos** | ✅ Sí | Tus apellidos |
+| **Usuario** | ✅ Sí | Tu nombre de usuario o nickname visible en la plataforma |
+| **Teléfono** | ✅ Sí | Tu número de contacto personal |
+| **Facultad** | ✅ Sí | La facultad o carrera a la que perteneces en tu universidad |
+| **Código universitario** | ✅ Sí | Tu código de estudiante universitario |
+| **Correo electrónico** | 🔒 Solo lectura | Vinculado a tu cuenta de Firebase Auth; no se puede cambiar aquí |
+| **Código único** | 🔒 Solo lectura | Identificador interno del sistema; gestionado automáticamente |
+| **Rol** | 🔒 Solo lectura | Asignado por el sistema (valor por defecto: `usuario`) |
+
+<Info>
+  El **correo electrónico** mostrado en tu perfil proviene directamente de Firebase Authentication y no puede modificarse desde esta pantalla. Si necesitas cambiar el correo asociado a tu cuenta, deberías crear una nueva cuenta con el correo deseado.
+</Info>
+
+## Cómo actualizar tu perfil
+
+Actualizar tu información de perfil es un proceso rápido que puedes hacer en cualquier momento desde la pantalla principal de la app.
+
+<Steps>
+  <Step title="Ve a la pantalla principal (Home)">
+    Abre TradeWolf y asegúrate de estar en la pantalla de inicio. Aquí encontrarás el acceso directo a tu perfil.
+  </Step>
+  <Step title="Toca el botón Editar perfil">
+    En la pantalla principal, toca el botón **"Editar perfil"**. Se abrirá la pantalla de edición con tus datos actuales cargados en los campos correspondientes.
+  </Step>
+  <Step title="Modifica los campos que desees">
+    Actualiza uno o varios de los campos editables: **nombres**, **apellidos**, **usuario**, **teléfono**, **facultad** o **código universitario**. El correo electrónico aparece en pantalla pero no puede modificarse.
+  </Step>
+  <Step title="Guarda los cambios">
+    Toca el botón de guardar. TradeWolf actualizará tu información en Firebase Realtime Database y mostrará el mensaje de confirmación **"Perfil actualizado"**.
+  </Step>
+</Steps>
+
+## Dónde se guardan tus datos
+
+Toda la información de tu perfil se almacena en **Firebase Realtime Database** bajo tu identificador único de usuario (UID). Esto garantiza que tus datos estén disponibles en tiempo real y de forma segura.
+
+<Note>
+  Los campos **código único** y **rol** son gestionados internamente por TradeWolf y no aparecen en el formulario de edición. El rol de todos los usuarios nuevos es `usuario` por defecto y no puede modificarse desde la aplicación.
+</Note>
